@@ -28,7 +28,8 @@ function addToDo(event) {
     toDoDiv.appendChild(toDoLi);
     toDoDiv.appendChild(toDoChkBtn);
     toDoDiv.appendChild(toDoDelBtn);
-    document.getElementById("event").appendChild(toDoDiv);
+    let ul= document.getElementById("event");
+    ul.insertBefore(toDoDiv,ul.childNodes[0]);
     toDoDelBtn.addEventListener('click', delEvent);
     toDoChkBtn.addEventListener('click', chkEvent);
     todoInput.value = "";
